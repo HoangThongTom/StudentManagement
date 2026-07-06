@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.wrapper{
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:250px;
+
+    height:100vh;
+
+    background:#0f172a;
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    padding:18px 25px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#1e293b;
+
+}
+
+.sidebar ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    display:block;
+
+}
+
+.sidebar i{
+
+    margin-right:10px;
+
+}
+
+/* Main */
+
+.main{
+
+    margin-left:250px;
+
+    width:100%;
+
+}
+
+/* Navbar */
+
+.topbar{
+
+    background:white;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+}
+
+.search input{
+
+    width:300px;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    border:1px solid #ddd;
+
+}
+
+.user{
+
+    font-weight:bold;
+
+}
+
+/* Content */
+
+.content{
+
+    padding:30px;
+
+}
+
+.card{
+
+    border-radius:15px;
+
+}
+
+.card h2{
+
+    font-weight:bold;
+
+}
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#eef3ff;
+
+}
+
+.content{
+
+    padding:35px;
+
+}

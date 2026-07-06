@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Add Student</h2>
+
+<form method="POST">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+<label>Student ID</label>
+<input type="text" class="form-control" name="MaSV" required>
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Full Name</label>
+<input type="text" class="form-control" name="HoTen" required>
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Gender</label>
+
+<select class="form-select" name="GioiTinh">
+<option>Nam</option>
+<option>Nữ</option>
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Date of Birth</label>
+<input type="date" class="form-control" name="NgaySinh">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Major</label>
+<input class="form-control" name="NganhHoc">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Email</label>
+<input class="form-control" name="Email">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Phone</label>
+<input class="form-control" name="SoDienThoai">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Address</label>
+<input class="form-control" name="DiaChi">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Enrollment Year</label>
+<input class="form-control" name="NamNhapHoc">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Status</label>
+
+<select class="form-select" name="TrangThaiHocTap">
+<option>Đang học</option>
+<option>Bảo lưu</option>
+<option>Tốt nghiệp</option>
+</select>
+
+</div>
+
+</div>
+
+<button class="btn btn-success">
+Save
+</button>
+
+<a href="/students" class="btn btn-secondary">
+Cancel
+</a>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-white bg-primary mb-4">
+            <div class="card-body">
+                <h5>Total Students</h5>
+                <h2>120</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-white bg-success mb-4">
+            <div class="card-body">
+                <h5>Total Lecturers</h5>
+                <h2>20</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-white bg-warning mb-4">
+            <div class="card-body">
+                <h5>Subjects</h5>
+                <h2>35</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-white bg-danger mb-4">
+            <div class="card-body">
+                <h5>Average GPA</h5>
+                <h2>3.45</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card shadow">
+
+    <div class="card-header bg-dark text-white">
+
+        Recent Students
+
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>SV001</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Nam</td>
+                    <td>Information Technology</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>SV002</td>
+                    <td>Trần Thị B</td>
+                    <td>Nữ</td>
+                    <td>Artificial Intelligence</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>SV003</td>
+                    <td>Lê Văn C</td>
+                    <td>Nam</td>
+                    <td>Cyber Security</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
