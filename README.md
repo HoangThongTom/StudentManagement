@@ -237,4 +237,4 @@ Các bảng dữ liệu chính:
 
 ## Giấy phép
 
-Dự án được thực hiện phục vụ mục đích học tập và nghiên cứu tại Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh (UTH).
+Dự án được thực hiện phục vụ mục đích học tập tại Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh (UTH).
