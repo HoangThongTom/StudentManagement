@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Assignment Management</h2>
+
+<div class="d-flex justify-content-between mb-3">
+
+<form method="GET">
+
+<input
+class="form-control"
+name="keyword"
+placeholder="Search...">
+
+</form>
+
+<a
+href="{{ url_for('assignment.add_assignment') }}"
+class="btn btn-success">
+
+Add Assignment
+
+</a>
+
+</div>
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>Lecturer</th>
+
+<th>Subject</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for item in assignments %}
+
+<tr>
+
+<td>{{ item.MaGV }}</td>
+
+<td>{{ item.MaKhoaHoc }}</td>
+
+<td>
+
+<a
+
+href="{{ url_for('assignment.delete_assignment',
+
+magv=item.MaGV,
+
+makh=item.MaKhoaHoc) }}"
+
+class="btn btn-danger btn-sm">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

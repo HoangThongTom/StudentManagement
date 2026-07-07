@@ -6,24 +6,9 @@
     Student Management
 </h2>
 
-<!-- Search + Add -->
-<div class="d-flex justify-content-between align-items-center mb-3">
+<!-- Add Student -->
 
-    <form method="GET" action="{{ url_for('student.students') }}" class="d-flex">
-
-        <input
-            type="text"
-            class="form-control me-2"
-            name="keyword"
-            placeholder="Search by ID, Name, Email..."
-            value="{{ keyword if keyword else '' }}">
-
-        <button type="submit" class="btn btn-primary">
-            <i class="bi bi-search"></i>
-            Search
-        </button>
-
-    </form>
+<div class="d-flex justify-content-end mb-3">
 
     <a href="{{ url_for('student.add_student') }}"
        class="btn btn-success">
@@ -35,11 +20,25 @@
 
 </div>
 
+<!-- Search Result -->
+
+{% if keyword %}
+
+<div class="alert alert-info">
+
+    Search result for:
+    <strong>{{ keyword }}</strong>
+
+</div>
+
+{% endif %}
+
 <table class="table table-bordered table-hover shadow">
 
     <thead class="table-dark">
 
         <tr>
+
             <th>ID</th>
             <th>Name</th>
             <th>Gender</th>
@@ -47,6 +46,7 @@
             <th>Email</th>
             <th>Status</th>
             <th width="180">Action</th>
+
         </tr>
 
     </thead>

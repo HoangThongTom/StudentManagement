@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Edit Lecturer</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<label>Lecturer ID</label>
+<input type="text"
+class="form-control"
+value="{{ lecturer.MaGV }}"
+readonly>
+</div>
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text"
+name="TenGV"
+class="form-control"
+value="{{ lecturer.TenGV }}">
+</div>
+
+<div class="mb-3">
+<label>Department</label>
+<input type="text"
+name="BoMon"
+class="form-control"
+value="{{ lecturer.BoMon }}">
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email"
+name="Email"
+class="form-control"
+value="{{ lecturer.Email }}">
+</div>
+
+<div class="mb-3">
+<label>Major</label>
+<input type="text"
+name="ChuyenNganh"
+class="form-control"
+value="{{ lecturer.ChuyenNganh }}">
+</div>
+
+<div class="mb-3">
+<label>Phone</label>
+<input type="text"
+name="SoDienThoai"
+class="form-control"
+value="{{ lecturer.SoDienThoai }}">
+</div>
+
+<button class="btn btn-warning">
+Update
+</button>
+
+<a href="{{ url_for('lecturer.lecturers') }}"
+class="btn btn-secondary">
+Cancel
+</a>
+
+</form>
+
+{% endblock %}

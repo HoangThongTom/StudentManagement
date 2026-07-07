@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">
+    Subject Management
+</h2>
+
+<!-- Search + Add -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+    <form method="GET"
+          action="{{ url_for('subject.subjects') }}"
+          class="d-flex">
+
+        <input
+            type="text"
+            name="keyword"
+            class="form-control me-2"
+            placeholder="Search by ID or Subject Name..."
+            value="{{ keyword if keyword else '' }}">
+
+        <button
+            type="submit"
+            class="btn btn-primary">
+
+            <i class="bi bi-search"></i>
+            Search
+
+        </button>
+
+    </form>
+
+    <a href="{{ url_for('subject.add_subject') }}"
+       class="btn btn-success">
+
+        <i class="bi bi-plus-circle"></i>
+        Add Subject
+
+    </a>
+
+</div>
+
+<table class="table table-bordered table-hover shadow">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>Subject ID</th>
+            <th>Subject Name</th>
+            <th>Description</th>
+            <th>Credits</th>
+            <th width="170">Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    {% if subjects %}
+
+        {% for subject in subjects %}
+
+        <tr>
+
+            <td>{{ subject.MaKhoaHoc }}</td>
+            <td>{{ subject.TenKhoaHoc }}</td>
+            <td>{{ subject.MoTa }}</td>
+            <td>{{ subject.SoTinChi }}</td>
+
+            <td>
+
+                <a href="{{ url_for('subject.edit_subject', id=subject.MaKhoaHoc) }}"
+                   class="btn btn-warning btn-sm">
+
+                    <i class="bi bi-pencil-square"></i>
+
+                </a>
+
+                <a href="{{ url_for('subject.delete_subject', id=subject.MaKhoaHoc) }}"
+                   class="btn btn-danger btn-sm"
+                   onclick="return confirm('Delete this subject?')">
+
+                    <i class="bi bi-trash"></i>
+
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <tr>
+
+            <td colspan="5" class="text-center text-muted">
+
+                No subjects found.
+
+            </td>
+
+        </tr>
+
+    {% endif %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

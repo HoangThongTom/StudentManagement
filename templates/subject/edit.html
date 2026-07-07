@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">
+    Edit Subject
+</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Subject ID
+        </label>
+
+        <input
+            type="text"
+            name="MaKhoaHoc"
+            class="form-control"
+            value="{{ subject.MaKhoaHoc }}"
+            readonly>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Subject Name
+        </label>
+
+        <input
+            type="text"
+            name="TenKhoaHoc"
+            class="form-control"
+            value="{{ subject.TenKhoaHoc }}"
+            required>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Description
+        </label>
+
+        <textarea
+            name="MoTa"
+            class="form-control"
+            rows="4">{{ subject.MoTa }}</textarea>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Credits
+        </label>
+
+        <input
+            type="number"
+            name="SoTinChi"
+            class="form-control"
+            value="{{ subject.SoTinChi }}"
+            min="1"
+            required>
+
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-warning">
+
+        <i class="bi bi-pencil-square"></i>
+
+        Update
+
+    </button>
+
+    <a href="{{ url_for('subject.subjects') }}"
+       class="btn btn-secondary">
+
+        Cancel
+
+    </a>
+
+</form>
+
+{% endblock %}

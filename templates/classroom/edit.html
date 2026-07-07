@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Edit Class</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<label class="form-label">Class ID</label>
+<input
+type="text"
+name="MaLHP"
+class="form-control"
+value="{{ classroom.MaLHP }}"
+readonly>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Schedule</label>
+<input
+type="text"
+name="ThoiGianHoc"
+class="form-control"
+value="{{ classroom.ThoiGianHoc }}">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Location</label>
+<input
+type="text"
+name="DiaDiemHoc"
+class="form-control"
+value="{{ classroom.DiaDiemHoc }}">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Lecturer ID</label>
+<input
+type="text"
+name="MaGV"
+class="form-control"
+value="{{ classroom.MaGV }}">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Subject ID</label>
+<input
+type="text"
+name="MaKhoaHoc"
+class="form-control"
+value="{{ classroom.MaKhoaHoc }}">
+</div>
+
+<button class="btn btn-warning">
+<i class="bi bi-pencil-square"></i>
+Update
+</button>
+
+<a href="{{ url_for('classroom.classes') }}"
+class="btn btn-secondary">
+Cancel
+</a>
+
+</form>
+
+{% endblock %}

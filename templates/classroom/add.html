@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Add Class</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<label class="form-label">Class ID</label>
+<input type="text" name="MaLHP" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Schedule</label>
+<input type="text" name="ThoiGianHoc" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Location</label>
+<input type="text" name="DiaDiemHoc" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Lecturer ID</label>
+<input type="text" name="MaGV" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Subject ID</label>
+<input type="text" name="MaKhoaHoc" class="form-control">
+</div>
+
+<button class="btn btn-success">
+<i class="bi bi-check-circle"></i>
+Save
+</button>
+
+<a href="{{ url_for('classroom.classes') }}"
+class="btn btn-secondary">
+Cancel
+</a>
+
+</form>
+
+{% endblock %}
