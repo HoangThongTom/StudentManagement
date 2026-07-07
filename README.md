@@ -45,7 +45,6 @@ StudentManagement/
 │
 ├── app.py
 ├── models.py
-├── forms.py
 ├── config.py
 ├── requirements.txt
 │
